@@ -4,8 +4,10 @@ let express = require("express");
 let mongoose = require("mongoose");
 // Import Body parser
 let bodyParser = require("body-parser");
-const connectionstr =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/Login";
+require("dotenv").config();
+let dev_db_url =
+  "mongodb://Qaimali:qaim!!..488@ds159188.mlab.com:59188/product-app-backend";
+const connectionstr = process.env.db_HOST || "mongodb://localhost:27017/Login";
 
 const options = {
   reconnectTries: Number.MAX_VALUE,

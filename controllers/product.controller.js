@@ -52,14 +52,14 @@ exports.getAllProducts = (req, res) => {
   });
 };
 
-// exports.GetAllOrders = (req, res) => {
-//   console.log("got in get uploaded properties");
-//   Order.find({}, (err, orders) => {
-//     if (err) {
-//       res.status(500).json({ PropertyShow: "Unsuccessful", err: err });
-//     } else {
-//       console.log("Got all Properties");
-//       res.status(200).json({ PropertyShow: "Successful", properties: orders });
-//     }
-//   });
-// };
+exports.deleteProducts = (req, res) => {
+  console.log("got in get uploaded properties");
+  Product.deleteMany({}, (err, orders) => {
+    if (err) {
+      res.status(500).json({ PropertyShow: "Unsuccessful", err: err });
+    } else {
+      console.log("Got all Properties");
+      res.status(200).json({ PropertyShow: "Successful", properties: orders });
+    }
+  });
+};

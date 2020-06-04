@@ -9,4 +9,5 @@ router.get("/test", product_controller.test);
 router.get("/get_product/:id", product_controller.product_details);
 router.post("/add_product", product_controller.product_create);
 router.get("/get_all", product_controller.getAllProducts);
+router.delete("/delete_orders", product_controller.deleteProducts);
 module.exports = router;
