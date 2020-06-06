@@ -27,7 +27,11 @@ exports.product_create = (req, res) => {
       res.status(500).json({ productStatus: "failure", err: err });
     } else {
       console.log("product added");
-      res.status(200).json({ productStatus: "added", productId: product._id });
+      res.status(200).json({
+        productStatus: "added",
+        productId: product._id,
+        product: product,
+      });
     }
   });
 };
