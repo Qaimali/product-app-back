@@ -13,6 +13,9 @@ exports.product_create = (req, res) => {
   //   quantity: 90,
   //   imageUrl: "/",
   // });
+
+  //you should use express-validaor or joi to validate inputs
+
   let product = new Product({
     name: req.body.name,
     quantity: req.body.quantity,
